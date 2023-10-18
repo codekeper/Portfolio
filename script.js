@@ -73,22 +73,22 @@ setInterval(() => {
 }, 4000);
 
 // On scroll animation 
-let section = document.querySelectorAll('#porfolioHeading');
+// let section = document.querySelectorAll('#porfolioHeading');
 
-window.onscroll = () =>{
-    section.forEach(sec => {
-        let top = window.scrollY;
-        let offset = sec.offsetTop;
-        let height = sec.offsetHeight;
+// window.onscroll = () =>{
+//     section.forEach(sec => {
+//         let top = window.scrollY;
+//         let offset = sec.offsetTop;
+//         let height = sec.offsetHeight;
 
-        if(top <= offset){
-            sec.classList.add('headings')
-        }
-        else{
-            sec.classList.remove('headings')
-        }
-    });
-}
+//         if(top <= offset){
+//             sec.classList.add('headings')
+//         }
+//         else{
+//             sec.classList.remove('headings')
+//         }
+//     });
+// }
 
 
 
@@ -127,7 +127,7 @@ function numberFigureProgress(actualElem, limit) {
 
     const progFun = setInterval(() => {
         progressStart++;
-        targetEmlem.innerHTML = `${progressStart}`;
+        targetEmlem.innerHTML = `${progressStart} /-`;
 
         if (progressStart === progressEnd) {
             clearInterval(progFun);
@@ -137,7 +137,7 @@ function numberFigureProgress(actualElem, limit) {
 numberFigureProgress('#workHours', 124)
 numberFigureProgress('#projectDone', 36)
 numberFigureProgress('#cutomerSatisfation', 99)
-numberFigureProgress('#awardWins', 7)
+numberFigureProgress('#awardWins', 27)
 
 // close navbar after clicking on any link:
 document.addEventListener('DOMContentLoaded', function () {

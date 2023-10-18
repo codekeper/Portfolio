@@ -123,45 +123,8 @@
 
 /********************** About **********************/
 
-.headings,
-#all3Lines,
-#aboutParagraph {
-  position: relative;
-}
-.headings {
-  animation: heading 1s ease-out ;
-}
-#all3Lines {
-  animation: heading 1.2s ease-out infinite;
-}
-
 .lines {
   width: 2rem;
-}
-#aboutParagraph {
-  animation: aboutParagraph 1.3s ease-out infinite;
-}
-
-@keyframes heading {
-  0% {
-    bottom: -10px;
-    opacity: 0;
-  }
-  100% {
-    bottom: 0px;
-    opacity: 1;
-  }
-}
-
-@keyframes aboutParagraph {
-  0% {
-    bottom: -10px;
-    opacity: 0;
-  }
-  100% {
-    bottom: 0px;
-    opacity: 1;
-  }
 }
 
 #aboutParagraph {
@@ -247,47 +210,6 @@
 #work2,
 #work3 {
   padding: 2rem;
-  position: relative;
-}
-#work1 {
-  animation: forWork1 2s infinite;
-}
-#work2 {
-  animation: forWork2 2s infinite;
-}
-#work3 {
-  animation: forWork3 2s infinite;
-}
-@keyframes forWork1 {
-  0% {
-    left: -6%;
-    opacity: 0;
-    box-shadow: inset;
-  }
-  100% {
-    left: 0%;
-    opacity: 1;
-  }
-}
-@keyframes forWork2 {
-  0% {
-    left: -8%;
-    opacity: 0;
-  }
-  100% {
-    left: 0%;
-    opacity: 1;
-  }
-}
-@keyframes forWork3 {
-  0% {
-    left: -12%;
-    opacity: 0;
-  }
-  100% {
-    left: 0%;
-    opacity: 1;
-  }
 }
 
 #work1Head,
@@ -321,38 +243,6 @@
   display: block;
 }
 
-#rowOne1,
-#rowOne2,
-#rowThree1,
-#rowThree2 {
-  animation: rowOneThree 1.8s ease-out infinite;
-}
-
-@keyframes rowOneThree {
-  0% {
-    bottom: -5%;
-    opacity: 0;
-  }
-  100% {
-    bottom: 0;
-    opacity: 1;
-  }
-}
-#rowTwo1,
-#rowTwo2 {
-  animation: rowTwo 1.5s ease-out infinite;
-}
-
-@keyframes rowTwo {
-  0% {
-    bottom: -5%;
-    opacity: 0;
-  }
-  100% {
-    bottom: 0;
-    opacity: 1;
-  }
-}
 
 #portfolioImageText {
   display: none;
@@ -383,6 +273,10 @@
   filter: saturate(30%) grayscale(10%);
 }
 
+.column:hover .portfolioImg{
+  filter: none;
+}
+
 #portfolioB0th:hover .portfolioImg {
   filter: none;
   transition: transform 0.3s ease-in;
@@ -405,21 +299,6 @@
   background: linear-gradient(to right, var(--colorgray), var(--colordark));
 }
 
-#experienceHeading, #experienceContent, #educationHeading, #educationContent{
-  position: relative;
-  animation: expEdu 2.5s ease-out infinite;
-}
-
-@keyframes expEdu {
-  0% {
-    bottom: -5%;
-    opacity: 0;
-  }
-  100% {
-    bottom: 0%;
-    opacity: 1;
-  }
-}
 .numbering {
   height: 35px;
   width: 35px;
