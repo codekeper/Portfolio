@@ -1,0 +1,578 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo:wght@500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: whitesmoke;
+  font-family: "Exo", sans-serif;
+  /* border: 1px solid;
+  margin: 1px; */
+}
+
+.headings {
+  font-size: 2rem;
+}
+:root {
+  --fontwhite: whitesmoke;
+  --fontblack: black;
+  --colorred: red;
+  --colorsecondary: #6c757d;
+  --colorgray: rgba(112, 112, 112, 0.4);
+  --colordark: #212529;
+}
+
+/********************** Navigation-Bar  **********************/
+#logo {
+  color: var(--fontwhite);
+}
+#logo h6 {
+  font-size: 1rem;
+  color: var(--fontwhite);
+  /* line-height: 0.2; */
+}
+
+#toggleButton {
+  color: whitesmoke;
+  font-size: 1.5rem;
+}
+#navbarSupportedContent ul {
+  margin: 10% auto 2% 0;
+  padding-bottom: 10.5rem;
+}
+#navbarSupportedContent ul li {
+  line-height: 14px;
+  font-size: large;
+  margin-top: 5px;
+  font-weight: bold;
+}
+#navbarSupportedContent ul li a {
+  color: var(--fontwhite);
+}
+
+/********************** Side-Bar  **********************/
+#sidebar {
+  transform: rotate(270deg);
+  transform-origin: left;
+  margin: 24.5rem 0 0 3rem;
+  z-index: 2;
+}
+
+#followMe i {
+  letter-spacing: 2px;
+  word-spacing: 3px;
+}
+.eachIcon {
+  margin: 0 7px 0 7px;
+  transform: rotate(90deg);
+}
+/********************** Bottom Back button  **********************/
+
+#goTopButton {
+  position: fixed;
+  bottom: 2rem;
+  right: 3rem;
+  z-index: 2;
+}
+.goTopButtonIn {
+  background: transparent;
+}
+
+/********************** Main **********************/
+
+#main {
+  height: 30rem;
+}
+#mainleft {
+  padding-left: 7rem;
+  width: 50%;
+}
+
+#main2 {
+  font-size: 3rem;
+  position: relative;
+  width: 67%;
+}
+
+#main2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--colordark);
+  border-left: 1px solid red;
+  animation: moveLine 4s steps(12) infinite;
+}
+
+@keyframes moveLine {
+  40%,
+  60% {
+    left: 100%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+
+#mainRight img {
+  height: 30rem;
+  width: 23rem;
+  opacity: 0.6;
+}
+
+/********************** About **********************/
+
+.headings,
+#all3Lines,
+#aboutParagraph {
+  position: relative;
+}
+.headings {
+  animation: heading 1s ease-out ;
+}
+#all3Lines {
+  animation: heading 1.2s ease-out infinite;
+}
+
+.lines {
+  width: 2rem;
+}
+#aboutParagraph {
+  animation: aboutParagraph 1.3s ease-out infinite;
+}
+
+@keyframes heading {
+  0% {
+    bottom: -10px;
+    opacity: 0;
+  }
+  100% {
+    bottom: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes aboutParagraph {
+  0% {
+    bottom: -10px;
+    opacity: 0;
+  }
+  100% {
+    bottom: 0px;
+    opacity: 1;
+  }
+}
+
+#aboutParagraph {
+  margin: 3.5rem 19rem;
+  text-align: center;
+}
+
+#HTMLcircle,
+#CSScircle,
+#JScircle,
+#bootstrapCircle {
+  height: 13rem;
+  width: 13rem;
+  margin: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: conic-gradient(red 230.6deg, rgb(54, 53, 53) 0deg);
+}
+
+#HTMLcircleIn,
+#CSScircleIn,
+#JScircleIn,
+#bootstrapcircleIn {
+  height: 97%;
+  width: 97%;
+  background-color: var(--colordark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+#HTMLlable,
+#CSSlable,
+#JSlable,
+#bootstraplable {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+/********************** Quote **********************/
+
+#quote {
+  background-image: url(images/5.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  position: relative;
+  background-color: var(--colordark);
+  box-shadow: inset 10px 10px 179px 143px rgba(0, 0, 0, 0.8);
+  overflow: visible;
+  z-index: 1;
+}
+#quote::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+#quoteMain {
+  margin: 9rem 20rem;
+}
+
+#commaImg,
+#actualQuote,
+#authorName {
+  z-index: 2;
+}
+
+/********************** What I Do **********************/
+#workingMain {
+  margin: 5rem 12rem;
+}
+#work1,
+#work2,
+#work3 {
+  padding: 2rem;
+  position: relative;
+}
+#work1 {
+  animation: forWork1 2s infinite;
+}
+#work2 {
+  animation: forWork2 2s infinite;
+}
+#work3 {
+  animation: forWork3 2s infinite;
+}
+@keyframes forWork1 {
+  0% {
+    left: -6%;
+    opacity: 0;
+    box-shadow: inset;
+  }
+  100% {
+    left: 0%;
+    opacity: 1;
+  }
+}
+@keyframes forWork2 {
+  0% {
+    left: -8%;
+    opacity: 0;
+  }
+  100% {
+    left: 0%;
+    opacity: 1;
+  }
+}
+@keyframes forWork3 {
+  0% {
+    left: -12%;
+    opacity: 0;
+  }
+  100% {
+    left: 0%;
+    opacity: 1;
+  }
+}
+
+#work1Head,
+#work2Head,
+#work3Head {
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#work1Heading,
+#work2Heading,
+#work3Heading {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin: auto 1rem;
+}
+
+/********************** porfolio **********************/
+
+#images {
+  margin: 4vw 16vw;
+}
+
+.column {
+  text-align: center;
+  position: relative;
+}
+
+.column:hover #portfolioImageText {
+  display: block;
+}
+
+#rowOne1,
+#rowOne2,
+#rowThree1,
+#rowThree2 {
+  animation: rowOneThree 1.8s ease-out infinite;
+}
+
+@keyframes rowOneThree {
+  0% {
+    bottom: -5%;
+    opacity: 0;
+  }
+  100% {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+#rowTwo1,
+#rowTwo2 {
+  animation: rowTwo 1.5s ease-out infinite;
+}
+
+@keyframes rowTwo {
+  0% {
+    bottom: -5%;
+    opacity: 0;
+  }
+  100% {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+#portfolioImageText {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 2rem;
+  height: 98%;
+  width: 90%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#portfolioImageText h6 {
+  height: 86%;
+  color: black;
+  font-size: 1.5rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#portfolioImageText div {
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: red;
+}
+.portfolioImg {
+  filter: saturate(30%) grayscale(10%);
+}
+
+#portfolioB0th:hover .portfolioImg {
+  filter: none;
+  transition: transform 0.3s ease-in;
+  transform: scale(0.95);
+  z-index: 4;
+}
+#col1 div,
+#col2 div,
+#col3 div {
+  margin: 0.5rem -1.2rem;
+}
+
+/********************** resume **********************/
+#experienceHeads,
+#educationHeads {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 18px 0 0 18px;
+  background: linear-gradient(to right, var(--colorgray), var(--colordark));
+}
+
+#experienceHeading, #experienceContent, #educationHeading, #educationContent{
+  position: relative;
+  animation: expEdu 2.5s ease-out infinite;
+}
+
+@keyframes expEdu {
+  0% {
+    bottom: -5%;
+    opacity: 0;
+  }
+  100% {
+    bottom: 0%;
+    opacity: 1;
+  }
+}
+.numbering {
+  height: 35px;
+  width: 35px;
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--colorred);
+  margin-left: 0;
+  border-radius: 50%;
+}
+#experienceText,
+#educationText {
+  border-left: 1px solid var(--colorgray);
+}
+
+/********************** numFigures **********************/
+
+#numFigures {
+  padding: 8rem;
+  width: 100%;
+  height: 100%;
+  background-image: url("images/5.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+  position: relative;
+  box-shadow: inset 0 0 164px 55px rgba(0, 0, 0, 0.8);
+}
+#numFigures::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.numberBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.number {
+  font-size: 1.5rem;
+  font-weight: bold;
+  z-index: 2;
+}
+.lable {
+  font-size: 0.6rem;
+}
+
+/********************** Recent work **********************/
+
+#recentWork {
+  padding: 4rem;
+}
+#recentWorkAnchorTag {
+  text-decoration: none;
+}
+.card {
+  height: 25rem;
+  width: 20rem;
+  margin: 0 7px 0 7px;
+}
+
+.card img {
+  height: 14rem;
+  filter: saturate(30%) grayscale(20%);
+}
+.card img:hover {
+  transition: transform 0.3s ease-in-out;
+  transform: scale(0.98);
+  filter: none;
+}
+.card-body {
+  border: none;
+  background-color: var(--colordark);
+}
+.card-title {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 10px;
+}
+.card-text {
+  font-size: 0.9rem;
+}
+
+/********************** Contact Form **********************/
+
+.inputs {
+  width: 40rem;
+}
+
+#input1 input,
+#input2 input,
+#input3 input {
+  background-color: transparent;
+  font-size: 0.9rem;
+  color: whitesmoke;
+}
+#input1 input:hover,
+#input2 input:hover,
+#input3 input:hover {
+  background-color: rgba(184, 116, 116, 0.3);
+}
+
+#textInputArea {
+  width: 39.5rem;
+}
+#textInputArea textarea {
+  background-color: transparent;
+  border: 2px solid var(--colorgray);
+  color: whitesmoke;
+}
+#textInputArea textarea:hover {
+  background-color: rgba(184, 116, 116, 0.3);
+}
+
+#formButton button {
+  font-size: 15px;
+}
+#myContactDetailsTop {
+  padding: 5rem 0;
+}
+.contactDetailsHeadings {
+  font-size: large;
+}
+#myContactDetailsTop div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 10px 0;
+}
+
+/********************** footer **********************/
+#footer {
+  padding: 1rem 0;
+}
+
+#bottomIcons {
+  display: flex;
+}
+#bottomIcons div a i {
+  padding: 0.4rem;
+  border-radius: 50%;
+  color: #d8d8d8;
+  background: var(--colorgray);
+}
+#bottomIcons div a i:hover {
+  background: red;
+}
